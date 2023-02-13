@@ -30,7 +30,7 @@ const debounced = debounce(() => {
                 return Notify.info(
                     'Too many matches found. Please enter a more specific name.'
                 );
-            } else if (10 > result.length > 1) {
+            } else if (result.length > 1) {
                 const markup = result.map(
                     ({ name, flags }) =>
                         `<li>
