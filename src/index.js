@@ -14,7 +14,7 @@ const refs = {
 const { searchBox, list, info } = refs
 
 const debounced = debounce(() => {
-    
+
     if (searchBox.value.trim() === "") {
         list.textContent = "";
         info.textContent = "";
@@ -42,7 +42,7 @@ const debounced = debounce(() => {
                 )
                 list.insertAdjacentHTML('beforeend', markup.join(''))
             } else {
-                markup = result.map(
+              const  markup = result.map(
                     ({ name, flags, capital, population, languages }) =>
                         `<div class="wrap">
   <img src=${flags.svg} alt="flag" width="70"/>
